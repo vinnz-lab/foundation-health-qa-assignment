@@ -70,3 +70,5 @@ Five axe scans found no violations within the selected WCAG A/AA rules on the te
 | WebKit  | Missing `icuin77.dll`, `libxml2.dll`, `spng.dll`, `jxl.dll`, `libwebpdemux.dll`      | One launch preflight fails; remaining eleven core cases are not attempted locally; execute CI with system dependencies |
 
 These are not cross-browser product failures. No system security settings or TLS verification were weakened to bypass them.
+
+The local browser launch blockers above were resolved for verification by running the unchanged suite in Ubuntu GitHub Actions: all 12 Firefox and all 12 WebKit core cases passed. See [results](results.md).

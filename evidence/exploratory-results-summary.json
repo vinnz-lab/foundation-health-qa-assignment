@@ -1,0 +1,437 @@
+{
+  "label": "Chromium exploratory",
+  "stats": {
+    "startTime": "2026-11-17T19:41:33.993Z",
+    "duration": 118833.31000000001,
+    "expected": 6,
+    "skipped": 0,
+    "unexpected": 8,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "CHECK-06 proposed rule: prevent completing an empty order",
+      "project": "chromium",
+      "status": "failed",
+      "durationMs": 13864,
+      "errors": [
+        "Error: expect(locator).toHaveCount(expected) failed"
+      ],
+      "observations": []
+    },
+    {
+      "title": "PERSONA-01 problem_user sort Z-A and remove added item",
+      "project": "chromium",
+      "status": "failed",
+      "durationMs": 13652,
+      "errors": [
+        "Error: expect(locator).toHaveText(expected) failed"
+      ],
+      "observations": [
+        {
+          "name": "persona-sort",
+          "data": {
+            "username": "problem_user",
+            "initial": [
+              "Sauce Labs Backpack",
+              "Sauce Labs Bike Light",
+              "Sauce Labs Bolt T-Shirt",
+              "Sauce Labs Fleece Jacket",
+              "Sauce Labs Onesie",
+              "Test.allTheThings() T-Shirt (Red)"
+            ],
+            "expected": [
+              "Test.allTheThings() T-Shirt (Red)",
+              "Sauce Labs Onesie",
+              "Sauce Labs Fleece Jacket",
+              "Sauce Labs Bolt T-Shirt",
+              "Sauce Labs Bike Light",
+              "Sauce Labs Backpack"
+            ],
+            "actual": [
+              "Sauce Labs Backpack",
+              "Sauce Labs Bike Light",
+              "Sauce Labs Bolt T-Shirt",
+              "Sauce Labs Fleece Jacket",
+              "Sauce Labs Onesie",
+              "Test.allTheThings() T-Shirt (Red)"
+            ],
+            "dialogs": []
+          }
+        }
+      ]
+    },
+    {
+      "title": "PERSONA-01 error_user sort Z-A and remove added item",
+      "project": "chromium",
+      "status": "failed",
+      "durationMs": 14334,
+      "errors": [
+        "Error: expect(locator).toHaveText(expected) failed"
+      ],
+      "observations": [
+        {
+          "name": "persona-sort",
+          "data": {
+            "username": "error_user",
+            "initial": [
+              "Sauce Labs Backpack",
+              "Sauce Labs Bike Light",
+              "Sauce Labs Bolt T-Shirt",
+              "Sauce Labs Fleece Jacket",
+              "Sauce Labs Onesie",
+              "Test.allTheThings() T-Shirt (Red)"
+            ],
+            "expected": [
+              "Test.allTheThings() T-Shirt (Red)",
+              "Sauce Labs Onesie",
+              "Sauce Labs Fleece Jacket",
+              "Sauce Labs Bolt T-Shirt",
+              "Sauce Labs Bike Light",
+              "Sauce Labs Backpack"
+            ],
+            "actual": [
+              "Sauce Labs Backpack",
+              "Sauce Labs Bike Light",
+              "Sauce Labs Bolt T-Shirt",
+              "Sauce Labs Fleece Jacket",
+              "Sauce Labs Onesie",
+              "Test.allTheThings() T-Shirt (Red)"
+            ],
+            "dialogs": [
+              "Sorting is broken! This error has been reported to Backtrace."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "CHECK-07 refresh and repeated Finish attempt - UI observation only",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 14157,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "DATA-01 proposed rule: whitespace-only firstName must be rejected",
+      "project": "chromium",
+      "status": "failed",
+      "durationMs": 14398,
+      "errors": [
+        "Error: expect(locator).toBeVisible() failed"
+      ],
+      "observations": []
+    },
+    {
+      "title": "DATA-01 proposed rule: whitespace-only lastName must be rejected",
+      "project": "chromium",
+      "status": "failed",
+      "durationMs": 12322,
+      "errors": [
+        "Error: expect(locator).toBeVisible() failed"
+      ],
+      "observations": []
+    },
+    {
+      "title": "DATA-01 proposed rule: whitespace-only postalCode must be rejected",
+      "project": "chromium",
+      "status": "failed",
+      "durationMs": 13483,
+      "errors": [
+        "Error: expect(locator).toBeVisible() failed"
+      ],
+      "observations": []
+    },
+    {
+      "title": "DATA-02 surrounding spaces - observation, not acceptance certification",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 11407,
+      "errors": [],
+      "observations": [
+        {
+          "name": "input-observation",
+          "data": {
+            "id": "DATA-02 surrounding spaces",
+            "submitted": {
+              "firstName": " Alex ",
+              "lastName": " Tester ",
+              "postalCode": " SW1A 1AA "
+            },
+            "retained": {
+              "firstName": " Alex ",
+              "lastName": " Tester ",
+              "postalCode": " SW1A 1AA "
+            },
+            "constraints": [
+              {
+                "name": "firstName",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "lastName",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "postalCode",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "continue",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              }
+            ],
+            "url": "https://www.saucedemo.com/checkout-step-two.html",
+            "error": [],
+            "title": "Checkout: Overview"
+          }
+        }
+      ]
+    },
+    {
+      "title": "DATA-05 numeric names - observation, not acceptance certification",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 15632,
+      "errors": [],
+      "observations": [
+        {
+          "name": "input-observation",
+          "data": {
+            "id": "DATA-05 numeric names",
+            "submitted": {
+              "firstName": "12345",
+              "lastName": "67890",
+              "postalCode": "02108"
+            },
+            "retained": {
+              "firstName": "12345",
+              "lastName": "67890",
+              "postalCode": "02108"
+            },
+            "constraints": [
+              {
+                "name": "firstName",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "lastName",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "postalCode",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "continue",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              }
+            ],
+            "url": "https://www.saucedemo.com/checkout-step-two.html",
+            "error": [],
+            "title": "Checkout: Overview"
+          }
+        }
+      ]
+    },
+    {
+      "title": "DATA-05 punctuation names - observation, not acceptance certification",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 13439,
+      "errors": [],
+      "observations": [
+        {
+          "name": "input-observation",
+          "data": {
+            "id": "DATA-05 punctuation names",
+            "submitted": {
+              "firstName": "!!!",
+              "lastName": "???",
+              "postalCode": "02108"
+            },
+            "retained": {
+              "firstName": "!!!",
+              "lastName": "???",
+              "postalCode": "02108"
+            },
+            "constraints": [
+              {
+                "name": "firstName",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "lastName",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "postalCode",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "continue",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              }
+            ],
+            "url": "https://www.saucedemo.com/checkout-step-two.html",
+            "error": [],
+            "title": "Checkout: Overview"
+          }
+        }
+      ]
+    },
+    {
+      "title": "DATA-06 single-character names - observation, not acceptance certification",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 11897,
+      "errors": [],
+      "observations": [
+        {
+          "name": "input-observation",
+          "data": {
+            "id": "DATA-06 single-character names",
+            "submitted": {
+              "firstName": "A",
+              "lastName": "B",
+              "postalCode": "1"
+            },
+            "retained": {
+              "firstName": "A",
+              "lastName": "B",
+              "postalCode": "1"
+            },
+            "constraints": [
+              {
+                "name": "firstName",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "lastName",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "postalCode",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "continue",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              }
+            ],
+            "url": "https://www.saucedemo.com/checkout-step-two.html",
+            "error": [],
+            "title": "Checkout: Overview"
+          }
+        }
+      ]
+    },
+    {
+      "title": "DATA-06 long values (256 characters) - observation, not acceptance certification",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 11925,
+      "errors": [],
+      "observations": [
+        {
+          "name": "input-observation",
+          "data": {
+            "id": "DATA-06 long values (256 characters)",
+            "submitted": {
+              "firstName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "lastName": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+              "postalCode": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+            },
+            "retained": {
+              "firstName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "lastName": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+              "postalCode": "1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111"
+            },
+            "constraints": [
+              {
+                "name": "firstName",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "lastName",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "postalCode",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              },
+              {
+                "name": "continue",
+                "maxLength": -1,
+                "required": false,
+                "pattern": ""
+              }
+            ],
+            "url": "https://www.saucedemo.com/checkout-step-two.html",
+            "error": [],
+            "title": "Checkout: Overview"
+          }
+        }
+      ]
+    },
+    {
+      "title": "DATA-08 punctuation postcode - observation, not acceptance certification",
+      "project": "chromium",
+      "status": "failed",
+      "durationMs": 26080,
+      "errors": [
+        "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.saucedemo.com/\", waiting until \"load\""
+      ],
+      "observations": []
+    },
+    {
+      "title": "DATA-09 markup-like text - observation, not acceptance certification",
+      "project": "chromium",
+      "status": "failed",
+      "durationMs": 25424,
+      "errors": [
+        "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.saucedemo.com/\", waiting until \"load\""
+      ],
+      "observations": []
+    }
+  ]
+}

@@ -11,6 +11,8 @@ Prerequisites: Node.js 22.12 or newer (Node 24 LTS recommended for reproducibili
 Clone the repository, then install and run the checks:
 
 ```sh
+git clone https://github.com/vinnz-lab/foundation-health-qa-assignment.git
+cd foundation-health-qa-assignment
 npm ci
 npx playwright install chromium firefox webkit
 npm run typecheck
@@ -93,7 +95,7 @@ The observed checkout has first name, last name and postal code. There is no ema
 
 `.github/workflows/playwright.yml` installs locked dependencies, checks types/formatting, installs browsers and executes the matrix on Ubuntu. Reports are uploaded even after failures. The optional exploratory job is selected through manual workflow dispatch. CI has read-only repository permissions and needs no application credentials or paid service.
 
-The workflow is prepared locally. A GitHub run is only claimed when an actual run has been observed; see [results](docs/results.md) for current status.
+The first GitHub Actions run passed all 60 regression checks (36 Chromium, 12 Firefox, 12 WebKit). See [results](docs/results.md) for the tested commit, report link and local limitations.
 
 ## AI usage
 
@@ -107,10 +109,10 @@ No custom AI skill, subagent or Playwright agent was created or invoked to gener
 
 | Priority | Improvement                                                                  | Why                                                                     |
 | -------- | ---------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
-| P0       | Candidate walkthrough and final GitHub CI run                                | Establish understanding and verify the reviewer setup before submission |
+| P0       | Candidate walkthrough and review of CI evidence                              | Establish understanding and verify the reviewer setup before submission |
 | P1       | Agree customer data rules, supported countries and empty-order behaviour     | Turn exploratory hypotheses into reliable acceptance criteria           |
 | P1       | Resolve and retest confirmed product/accessibility findings                  | Preserve correct expectations and link failures to tracked issues       |
-| P1       | Complete any locally blocked browser run in a supported environment          | Obtain real execution evidence rather than assume compatibility         |
+| P1       | Maintain cross-browser execution in the verified Ubuntu CI environment       | Obtain real execution evidence rather than assume compatibility         |
 | P1       | Manual screen-reader, focus visibility, error-announcement and reflow review | Automated accessibility cannot cover the full user experience           |
 | P2       | Broader browsers/devices and responsive layouts                              | Current engine/core coverage is intentionally limited                   |
 | P2       | Dynamic catalogue, product detail and persistence across session boundaries  | Extend coverage beyond the selected stable inventory journey            |

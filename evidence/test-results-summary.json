@@ -1,0 +1,541 @@
+{
+  "label": "Chromium regression",
+  "stats": {
+    "startTime": "2026-11-17T19:41:24.990Z",
+    "duration": 265166,
+    "expected": 34,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "A11Y-01 axe WCAG A/AA scan: login",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 15478,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "A11Y-01 axe WCAG A/AA scan: inventory",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 15168,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "A11Y-01 axe WCAG A/AA scan: cart",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 18830,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "A11Y-01 axe WCAG A/AA scan: checkout",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 18777,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "A11Y-01 axe WCAG A/AA scan: checkout-errors",
+      "project": "chromium",
+      "status": "failed",
+      "durationMs": 24068,
+      "errors": [
+        "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.saucedemo.com/\", waiting until \"load\""
+      ],
+      "observations": []
+    },
+    {
+      "title": "A11Y-02 login fields work in keyboard order with accessible names",
+      "project": "chromium",
+      "status": "failed",
+      "durationMs": 23792,
+      "errors": [
+        "TimeoutError: page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.saucedemo.com/\", waiting until \"load\""
+      ],
+      "observations": []
+    },
+    {
+      "title": "A11Y-03 checkout keyboard order and focus evidence",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 11222,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-01 @core valid credentials open the catalogue",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 11191,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-02 @core rejects invalid login",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 17159,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-03 rejects invalid login",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 17111,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-04a rejects invalid login",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 9941,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-04b rejects invalid login",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 9892,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-04c rejects invalid login",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 13095,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-05 @core logout prevents returning directly to inventory",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 12867,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-06 logged-out direct access is denied: /inventory.html",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 10990,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-06 logged-out direct access is denied: /cart.html",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 10645,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-06 logged-out direct access is denied: /checkout-step-one.html",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 11789,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "AUTH-06 logged-out direct access is denied: /checkout-step-two.html",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 11691,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "CART-01 one product has correct price and quantity",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 13811,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "CART-02 CART-04 @core multiple products persist through navigation and refresh",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 13583,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "CART-03 remove from inventory and cart updates counts and empty state",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 14898,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "CHECK-01 @core missing firstName blocks checkout and permits recovery",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 14745,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "CHECK-01 @core missing lastName blocks checkout and permits recovery",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 20779,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "CHECK-01 @core missing postalCode blocks checkout and permits recovery",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 20782,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "CHECK-02-04 @core multi-item checkout preserves products, calculates totals and completes",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 12613,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "CHECK-05 cancel at information retains cart",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 12625,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "CHECK-05 cancel at overview retains cart",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 12773,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "DATA-03/04/07 legitimate names and postcode preserved: Anne-Marie",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 12710,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "DATA-03/04/07 legitimate names and postcode preserved: Jos�",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 15067,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "SORT-01 default A-Z matches displayed names",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 15116,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "SORT-02-05 @core full sequence follows az",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 12314,
+      "errors": [],
+      "observations": [
+        {
+          "name": "sort-evidence",
+          "data": {
+            "option": "az",
+            "original": [
+              {
+                "name": "Sauce Labs Backpack",
+                "price": 2999
+              },
+              {
+                "name": "Sauce Labs Bike Light",
+                "price": 999
+              },
+              {
+                "name": "Sauce Labs Bolt T-Shirt",
+                "price": 1599
+              },
+              {
+                "name": "Sauce Labs Fleece Jacket",
+                "price": 4999
+              },
+              {
+                "name": "Sauce Labs Onesie",
+                "price": 799
+              },
+              {
+                "name": "Test.allTheThings() T-Shirt (Red)",
+                "price": 1599
+              }
+            ],
+            "actual": [
+              {
+                "name": "Sauce Labs Backpack",
+                "price": 2999
+              },
+              {
+                "name": "Sauce Labs Bike Light",
+                "price": 999
+              },
+              {
+                "name": "Sauce Labs Bolt T-Shirt",
+                "price": 1599
+              },
+              {
+                "name": "Sauce Labs Fleece Jacket",
+                "price": 4999
+              },
+              {
+                "name": "Sauce Labs Onesie",
+                "price": 799
+              },
+              {
+                "name": "Test.allTheThings() T-Shirt (Red)",
+                "price": 1599
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "SORT-02-05 @core full sequence follows za",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 12236,
+      "errors": [],
+      "observations": [
+        {
+          "name": "sort-evidence",
+          "data": {
+            "option": "za",
+            "original": [
+              {
+                "name": "Sauce Labs Backpack",
+                "price": 2999
+              },
+              {
+                "name": "Sauce Labs Bike Light",
+                "price": 999
+              },
+              {
+                "name": "Sauce Labs Bolt T-Shirt",
+                "price": 1599
+              },
+              {
+                "name": "Sauce Labs Fleece Jacket",
+                "price": 4999
+              },
+              {
+                "name": "Sauce Labs Onesie",
+                "price": 799
+              },
+              {
+                "name": "Test.allTheThings() T-Shirt (Red)",
+                "price": 1599
+              }
+            ],
+            "actual": [
+              {
+                "name": "Test.allTheThings() T-Shirt (Red)",
+                "price": 1599
+              },
+              {
+                "name": "Sauce Labs Onesie",
+                "price": 799
+              },
+              {
+                "name": "Sauce Labs Fleece Jacket",
+                "price": 4999
+              },
+              {
+                "name": "Sauce Labs Bolt T-Shirt",
+                "price": 1599
+              },
+              {
+                "name": "Sauce Labs Bike Light",
+                "price": 999
+              },
+              {
+                "name": "Sauce Labs Backpack",
+                "price": 2999
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "SORT-02-05 @core full sequence follows lohi",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 14052,
+      "errors": [],
+      "observations": [
+        {
+          "name": "sort-evidence",
+          "data": {
+            "option": "lohi",
+            "original": [
+              {
+                "name": "Sauce Labs Backpack",
+                "price": 2999
+              },
+              {
+                "name": "Sauce Labs Bike Light",
+                "price": 999
+              },
+              {
+                "name": "Sauce Labs Bolt T-Shirt",
+                "price": 1599
+              },
+              {
+                "name": "Sauce Labs Fleece Jacket",
+                "price": 4999
+              },
+              {
+                "name": "Sauce Labs Onesie",
+                "price": 799
+              },
+              {
+                "name": "Test.allTheThings() T-Shirt (Red)",
+                "price": 1599
+              }
+            ],
+            "actual": [
+              {
+                "name": "Sauce Labs Onesie",
+                "price": 799
+              },
+              {
+                "name": "Sauce Labs Bike Light",
+                "price": 999
+              },
+              {
+                "name": "Sauce Labs Bolt T-Shirt",
+                "price": 1599
+              },
+              {
+                "name": "Test.allTheThings() T-Shirt (Red)",
+                "price": 1599
+              },
+              {
+                "name": "Sauce Labs Backpack",
+                "price": 2999
+              },
+              {
+                "name": "Sauce Labs Fleece Jacket",
+                "price": 4999
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "SORT-02-05 @core full sequence follows hilo",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 14023,
+      "errors": [],
+      "observations": [
+        {
+          "name": "sort-evidence",
+          "data": {
+            "option": "hilo",
+            "original": [
+              {
+                "name": "Sauce Labs Backpack",
+                "price": 2999
+              },
+              {
+                "name": "Sauce Labs Bike Light",
+                "price": 999
+              },
+              {
+                "name": "Sauce Labs Bolt T-Shirt",
+                "price": 1599
+              },
+              {
+                "name": "Sauce Labs Fleece Jacket",
+                "price": 4999
+              },
+              {
+                "name": "Sauce Labs Onesie",
+                "price": 799
+              },
+              {
+                "name": "Test.allTheThings() T-Shirt (Red)",
+                "price": 1599
+              }
+            ],
+            "actual": [
+              {
+                "name": "Sauce Labs Fleece Jacket",
+                "price": 4999
+              },
+              {
+                "name": "Sauce Labs Backpack",
+                "price": 2999
+              },
+              {
+                "name": "Sauce Labs Bolt T-Shirt",
+                "price": 1599
+              },
+              {
+                "name": "Test.allTheThings() T-Shirt (Red)",
+                "price": 1599
+              },
+              {
+                "name": "Sauce Labs Bike Light",
+                "price": 999
+              },
+              {
+                "name": "Sauce Labs Onesie",
+                "price": 799
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": "SORT-06 CART-05 repeated sorting preserves products and cart selection",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 14537,
+      "errors": [],
+      "observations": []
+    },
+    {
+      "title": "SORT-07 selected option and order remain consistent after cart navigation",
+      "project": "chromium",
+      "status": "passed",
+      "durationMs": 14567,
+      "errors": [],
+      "observations": []
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "label": "Firefox core",
+  "stats": {
+    "startTime": "2026-11-17T16:22:27.694Z",
+    "duration": 5144.505999999999,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 12,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "title": "AUTH-01 @core valid credentials open the catalogue",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "AUTH-02 @core rejects invalid login",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "AUTH-05 @core logout prevents returning directly to inventory",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "CART-02 CART-04 @core multiple products persist through navigation and refresh",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "CHECK-01 @core missing firstName blocks checkout and permits recovery",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "CHECK-01 @core missing lastName blocks checkout and permits recovery",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "CHECK-01 @core missing postalCode blocks checkout and permits recovery",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "CHECK-02-04 @core multi-item checkout preserves products, calculates totals and completes",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "SORT-02-05 @core full sequence follows az",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "SORT-02-05 @core full sequence follows za",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "SORT-02-05 @core full sequence follows lohi",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    },
+    {
+      "title": "SORT-02-05 @core full sequence follows hilo",
+      "project": "firefox",
+      "status": "failed",
+      "durationMs": 1,
+      "errors": [
+        "Browser failed to launch: spawn UNKNOWN (environment blocker)."
+      ],
+      "observations": []
+    }
+  ]
+}
