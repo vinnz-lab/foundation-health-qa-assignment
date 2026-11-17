@@ -1,0 +1,62 @@
+name: QA automation
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      exploratory:
+        description: Run additional exploratory checks (may reveal known demo issues)
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run format:check
+      - run: npx playwright install --with-deps chromium firefox webkit
+      - run: npm test
+      - uses: actions/upload-artifact@v5
+        if: ${{ !cancelled() }}
+        with:
+          name: regression-evidence
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
+
+  exploratory:
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.exploratory }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:exploratory
+      - uses: actions/upload-artifact@v5
+        if: ${{ !cancelled() }}
+        with:
+          name: exploratory-evidence
+          path: |
+            exploratory-report/
+            exploratory-results/
+          retention-days: 14

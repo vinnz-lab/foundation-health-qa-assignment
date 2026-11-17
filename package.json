@@ -1,0 +1,30 @@
+{
+  "name": "foundation-health-qa-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Risk-based Playwright and TypeScript tests for Sauce Demo",
+  "scripts": {
+    "test": "playwright test",
+    "test:core": "playwright test --grep @core",
+    "test:chromium": "playwright test --project=chromium",
+    "test:sorting": "playwright test sorting.spec.ts",
+    "test:a11y": "playwright test accessibility.spec.ts --project=chromium",
+    "test:exploratory": "playwright test --config=playwright.exploratory.config.ts",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:debug": "playwright test --project=chromium --debug",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@playwright/test": "1.65.1",
+    "@types/node": "26.6.6",
+    "prettier": "3.10.1",
+    "typescript": "7.0.2"
+  }
+}

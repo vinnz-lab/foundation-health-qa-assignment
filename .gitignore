@@ -1,0 +1,12 @@
+node_modules/
+playwright-report/
+test-results/
+exploratory-report/
+exploratory-results/
+firefox-report/
+firefox-results/
+webkit-results/
+.env
+.env.*
+!.env.example
+*.log
